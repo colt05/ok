@@ -20,11 +20,11 @@
     function start() {
       try{
       var timeStamp = Math.floor(Date.now() / 1000);
-      var correct = sha1(Math.floor(timeStamp / 1800).concat(navigator.userAgent).concat(myIP()));
+      var correct = sha1(Math.floor(timeStamp / 1800).tostring().concat(navigator.userAgent.tostring()).concat(myIP().tostring())).tostring();
       alert(correct());
       document.getElementById("correct").innerHTML = correct;
       }catch(err){
-        document.getElementById("correct").innerHTML = "Error: ".concat(err.message);
+        document.getElementById("correct").innerHTML = "Error: ".concat(err.message).tostring();
       }
     }
   </script>
