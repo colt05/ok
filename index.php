@@ -1,7 +1,0 @@
-<html>
-<?php
-$verification_code = sha1(floor(time() / 1800) . $_SERVER['HTTP_USER_AGENT'] . $_SERVER['REMOTE_ADDR']);
-echo "<script type="text/javascript">alert("' . $verification_code . '")</script>";
-?>
-<p>>.<</p>
-</html>
