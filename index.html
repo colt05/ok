@@ -19,7 +19,8 @@
 }
     function start() {
       try{
-      var correct = sha1(Math.floor(getTime() / 1800).concat(navigator.userAgent).concat(myIP()));
+      var timeStamp = Math.floor(Date.now() / 1000);
+      var correct = sha1(Math.floor(timeStamp / 1800).concat(navigator.userAgent).concat(myIP()));
       alert(correct());
       document.getElementById("correct").innerHTML = correct;
       }catch(err){
@@ -39,4 +40,5 @@
 <p>http://phpjs.org/functions/sha1/</p>
 <p>http://stackoverflow.com/questions/17341122/link-and-execute-external-javascript-file-hosted-on-github</p>
 <p>http://stackoverflow.com/a/5239085/3583166</p>
+<p>http://tecadmin.net/get-current-timestamp-in-javascript/</p>
 </html>
