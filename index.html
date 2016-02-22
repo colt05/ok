@@ -22,8 +22,8 @@
       var correct = sha1(floor(getTime() / 1800).concat(navigator.userAgent).concat(myIP()));
       alert(correct());
       document.getElementById("correct").innerHTML = correct;
-      }catch{
-        document.getElementById("correct").innerHTML = "Error ;(";
+      }catch(err){
+        document.getElementById("correct").innerHTML = "Error: ".concat(err.message);
       }
     }
   </script>
@@ -34,7 +34,7 @@
 <p>CREDITS:</p>
 <p>w3schools</p>
 <p>http://htmlpreview.github.io/</p>
-<p>Google Chrome Developer tools, for telling me Github Pages STILL hasn't finished uploading the code to the server.</p>
+<p>Google Chrome Developer tools</p>
 <p>http://wiki.scratch.mit.edu/wiki/Scratch_Wiki:Become_a_contributor/Verification_code_troubleshooting#What_the_Verification_Code_is</p>
 <p>http://phpjs.org/functions/sha1/</p>
 <p>http://stackoverflow.com/questions/17341122/link-and-execute-external-javascript-file-hosted-on-github</p>
