@@ -1,18 +1,42 @@
 <html>
   <script src="https://rawgit.com/kvz/phpjs/master/functions/strings/sha1.js"></script>
   <script>
+  function myIP() {
+    if (window.XMLHttpRequest) xmlhttp = new XMLHttpRequest();
+    else xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+
+    xmlhttp.open("GET","http://api.hostip.info/get_html.php",false);
+    xmlhttp.send();
+
+    hostipInfo = xmlhttp.responseText.split("\n");
+
+    for (i=0; hostipInfo.length >= i; i++) {
+        ipAddress = hostipInfo[i].split(":");
+        if ( ipAddress[0] == "IP" ) return ipAddress[1];
+    }
+
+    return false;
+}
     function start() {
-      alert(sha1("test"))
+      try{
+      var correct = sha1(floor(getTime() / 1800).concat(navigator.userAgent).concat(myIP()));
+      alert(correct());
+      document.getElementById("correct").innerHTML = correct;
+      }catch{
+        document.getElementById("correct").innerHTML = "Error ;(";
+      }
     }
   </script>
 <p>PHP code:  </p>  
 <P><code>$verification_code = sha1(floor(time() / 1800) . $_SERVER['HTTP_USER_AGENT'] . $_SERVER['REMOTE_ADDR']);</code></P>
 <button onclick="start()">Generate code with Javascript</button>
+<p id="correct">-code will appear here-</p>
 <p>CREDITS:</p>
 <p>w3schools</p>
 <p>http://htmlpreview.github.io/</p>
 <p>Google Chrome Developer tools, for telling me Github Pages STILL hasn't finished uploading the code to the server.</p>
-<a href="http://wiki.scratch.mit.edu/wiki/Scratch_Wiki:Become_a_contributor/Verification_code_troubleshooting#What_the_Verification_Code_is"></a>
-<a href="http://phpjs.org/functions/sha1/"></a>
-<p><a href="http://stackoverflow.com/questions/17341122/link-and-execute-external-javascript-file-hosted-on-github"></a>
+<p>http://wiki.scratch.mit.edu/wiki/Scratch_Wiki:Become_a_contributor/Verification_code_troubleshooting#What_the_Verification_Code_is</p>
+<p>http://phpjs.org/functions/sha1/</p>
+<p>http://stackoverflow.com/questions/17341122/link-and-execute-external-javascript-file-hosted-on-github</p>
+<p>http://stackoverflow.com/a/5239085/3583166</p>
 </html>
