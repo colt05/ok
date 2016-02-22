@@ -19,7 +19,7 @@
 }
     function start() {
       try{
-      var correct = sha1(floor(getTime() / 1800).concat(navigator.userAgent).concat(myIP()));
+      var correct = sha1(Math.floor(getTime() / 1800).concat(navigator.userAgent).concat(myIP()));
       alert(correct());
       document.getElementById("correct").innerHTML = correct;
       }catch(err){
