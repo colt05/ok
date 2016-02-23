@@ -21,7 +21,7 @@
       }catch(err){
         document.getElementById("correct").innerHTML = "Error: ".concat(err.message);
       }
-      function generateCode() {
+      function generateCode(variable) {
       try{
       //var varTime = Math.floor(timeStamp / 1800);
       var a = Math.floor(Date.now() / 1800);
@@ -30,9 +30,9 @@
       var ip = myIP()
       var c = b.concat(ip);
       //var correct = sha1(c);
-      return sha1(c);
+      document.write(variable.concat(sha1(c)))
       }catch(err){
-        return 0;
+      document.write(0);
       }
     }
   </script>
