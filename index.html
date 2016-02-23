@@ -25,9 +25,9 @@
       var b = timeStampString.concat(navigator.userAgent);
       var ip = myIP()
       var c = b.concat(ip);
-      var correct = sha1(c);
-      alert(correct());
-      document.getElementById("correct").innerHTML = correct;
+      //var correct = sha1(c);
+      alert(sha1(c));
+      document.getElementById("correct").innerHTML = sha1(c);
       }catch(err){
         document.getElementById("correct").innerHTML = "Error: ".concat(err.message);
       }
