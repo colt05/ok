@@ -21,6 +21,19 @@
       }catch(err){
         document.getElementById("correct").innerHTML = "Error: ".concat(err.message);
       }
+      function generateCode() {
+      try{
+      //var varTime = Math.floor(timeStamp / 1800);
+      var a = Math.floor(Date.now() / 1800);
+      var timeStampString = a.toString();
+      var b = timeStampString.concat(navigator.userAgent);
+      var ip = myIP()
+      var c = b.concat(ip);
+      //var correct = sha1(c);
+      return sha1(c);
+      }catch(err){
+        return 0;
+      }
     }
   </script>
 <p>PHP code:  </p>  
