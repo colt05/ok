@@ -1,5 +1,5 @@
 <html>
-  <title>JS Scratch Wiki Verification Code Generator</title>
+  <title>JS Scratch Wiki Verification Code Generator (No PHP!)</title>
   <script src="https://rawgit.com/kvz/phpjs/master/functions/strings/sha1.js"></script>
   <script>
   function myIP() {
@@ -20,7 +20,7 @@
 }
     function start() {
       try{
-      var varTime = Math.floor(timeStamp / 1800);
+      //var varTime = Math.floor(timeStamp / 1800);
       var a = Math.floor(Date.now() / 1000);
       var timeStampString = a.tostring();
       var b = timeStampString.concat(navigator.userAgent);
