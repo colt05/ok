@@ -19,8 +19,13 @@
 }
     function start() {
       try{
-      var timeStamp = Math.floor(Date.now() / 1000);
-      var correct = sha1(Math.floor(timeStamp / 1800).concat(navigator.userAgent).concat(myIP().tostring())).tostring();
+      var varTime = Math.floor(timeStamp / 1800);
+      var a = Math.floor(Date.now() / 1000);
+      var timeStampString = a.tostring();
+      var b = timeStampString.concat(navigator.userAgent);
+      var ip = myIP()
+      var c = b.concat(ip);
+      var correct = sha1(c);
       alert(correct());
       document.getElementById("correct").innerHTML = correct;
       }catch(err){
