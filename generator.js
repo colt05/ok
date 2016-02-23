@@ -22,3 +22,4 @@ document.write(variable.concat(" = ".concat(sha1(c).concat(";")))
 }catch(err){
 document.write(0);
 }
+}
