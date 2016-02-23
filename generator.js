@@ -18,7 +18,7 @@ var b = timeStampString.concat(navigator.userAgent);
 var ip = myIP()
  var c = b.concat(ip);
 //var correct = sha1(c);
-document.write(variable.concat(" = ".concat(sha1(c).concat(";")))
+document.write(variable.concat(" = ".concat(sha1(c).concat(";"))))
 }catch(err){
 document.write(0);
 }
