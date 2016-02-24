@@ -4,4 +4,4 @@ Import these libraries:
 - The script at http://phpjs.org/functions/sha1/  
 To import the libraries, be sure to use the code in librarytest.html to make sure the libraries load in order.  
 Import generator.js using rawgit. Using rawgit is important because the MIME type is correct.  
-Run the code with ``` generateCode() ```. This will return the code.  
+Run the code with ``` generateCode() ```. This will return the final code that the Scratch wiki would generate.
