@@ -6,7 +6,7 @@ function myIP() {
 importScript("https://www.l2.io/ip.js?var=myipvar")
 return myipvar;
 }
- function generateCode(variable) {
+ function generateCode() {
 try{
 importScript("https://rawgit.com/kvz/phpjs/master/functions/strings/sha1.js")
 //var varTime = Math.floor(timeStamp / 1800);
@@ -16,8 +16,8 @@ var b = timeStampString.concat(navigator.userAgent);
 var ip = myIP()
  var c = b.concat(ip);
 //var correct = sha1(c);
-document.write(variable.concat(" = ".concat(sha1(c).concat(";"))))
+return sha1(c);
 }catch(err){
-document.write(0);
+return 0;
 }
 }
