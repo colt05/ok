@@ -22,8 +22,10 @@ function code(){
 var myvar = "err";
   myvar = generateCode();
   alert(myvar);
+  document.getElementByID("c").innerHTML = myvar;
 }
 </script>
+<p id="c"></p>
 <p>credits: </p>
 <p>w3schools</p>
 <p>http://stackoverflow.com/questions/950087/include-a-javascript-file-in-another-javascript-file</p>
