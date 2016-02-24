@@ -18,6 +18,6 @@ var ip = myIP()
 //var correct = sha1(c);
 return sha1(c);
 }catch(err){
-return 0;
+return err.message;
 }
 }
