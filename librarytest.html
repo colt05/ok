@@ -1,9 +1,18 @@
 <title>Generator.JS Tester</title>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 <P>JQUERY MUST BE IMPORTED BEFORE IMPORTING generator.js LIBRARY.</P>
 <script src="https://rawgit.com/colt05/scratch_wiki_verification_code_generator/gh-pages/generator.js"></script>
 <script>
+var jq = document.createElement('script');
+jq.src = "//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js";
+document.querySelector('head').appendChild(jq);
+
+jq.onload = procede;
+function procede(){
+  var gen = document.createElement('script');
+  gen.src = "https://rawgit.com/colt05/scratch_wiki_verification_code_generator/gh-pages/generator.js";
+  document.querySelector('head').appendChild(gen);
 var myvar = "err";
   myvar = generateCode();
   alert(myvar);
+}
 </script>
