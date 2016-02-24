@@ -1,8 +1,6 @@
 var myipvar = "0.0.0.0";
 function importScript(url) {
-var script = document.createElement('script');
-script.src = url;
-document.getElementsByTagName('script')[0].parentNode.appendChild(script);
+document.write("<script src=\"".concat(url).concat("\"></script>"))
 }
 function myIP() {
 importScript("https://www.l2.io/ip.js?var=myipvar")
