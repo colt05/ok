@@ -1,0 +1,35 @@
+<title>Generator.JS Tester</title>
+<P>JQUERY MUST BE IMPORTED BEFORE IMPORTING generator.js LIBRARY.</P>
+<script>
+var jq = document.createElement('script');
+jq.src = "//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js";
+document.querySelector('head').appendChild(jq);
+
+jq.onload = procede;
+function procede(){
+  var gen = document.createElement('script');
+  gen.src = "https://rawgit.com/colt05/scratch_wiki_verification_code_generator/gh-pages/generator.js";
+  document.querySelector('head').appendChild(gen);
+  gen.onload = next;
+}
+function next(){
+    var sha = document.createElement('script');
+  sha.src = "https://rawgit.com/kvz/phpjs/master/functions/strings/sha1.js";
+  document.querySelector('head').appendChild(sha);
+  sha.onload = code;
+}
+function code(){
+var myvar = "err";
+  myvar = generateCode();
+  alert(myvar);
+  document.getElementById("c").innerHTML = myvar;
+}
+</script>
+<p id="c"></p>
+<p>credits: </p>
+<p>w3schools</p>
+<p>http://stackoverflow.com/questions/950087/include-a-javascript-file-in-another-javascript-file</p>
+<p>http://stackoverflow.com/a/3559079/3583166</p>
+<p>http://stackoverflow.com/questions/7496789/how-to-include-jquery-in-another-javascript-file</p>
+<p>http://api.jquery.com/jQuery.getScript/</p>
+<p>http://wiki.scratch.mit.edu/wiki/Special:RequestAccount</p>

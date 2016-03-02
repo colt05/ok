@@ -2,7 +2,7 @@
   <title>JS Scratch Wiki Verification Code Generator (No PHP)</title>
   <script>var myipvar = "0.0.0.0";</script>
   <script type="text/javascript" src="https://www.l2.io/ip.js?var=myipvar"></script>
-  <script src="https://rawgit.com/kvz/phpjs/master/functions/strings/sha1.js"></script>
+  <script src="https://cdn.rawgit.com/kvz/phpjs/master/functions/strings/sha1.js"></script>
   <script>
   function myIP() {
   return myipvar;
@@ -10,7 +10,7 @@
     function start() {
       try{
       //var varTime = Math.floor(timeStamp / 1800);
-      var a = Math.floor(Date.now() / 1000);
+      var a = Math.floor(Date.now() / 1800);
       var timeStampString = a.toString();
       var b = timeStampString.concat(navigator.userAgent);
       var ip = myIP()
@@ -25,6 +25,7 @@
   </script>
 <p>PHP code:  </p>  
 <P><code>$verification_code = sha1(floor(time() / 1800) . $_SERVER['HTTP_USER_AGENT'] . $_SERVER['REMOTE_ADDR']);</code></P>
+<p>Javascript: </p>
 <button onclick="start()">Generate code with Javascript</button>
 <p id="correct">-code will appear here-</p>
 <p>CREDITS:</p>
@@ -39,4 +40,9 @@
 <p>https://github.com/blog/572-bypassing-jekyll-on-github-pages</p>
 <p>https://help.github.com/articles/troubleshooting-jekyll-builds/</p>
 <p>https://www.l2.io/</p>
+<p>http://stackoverflow.com/questions/950087/include-a-javascript-file-in-another-javascript-file</p>
+<p>http://stackoverflow.com/questions/16282909/can-js-file-include-another-js-file</p>
+<p>http://stackoverflow.com/questions/3559063/how-to-enter-quotes-in-a-java-string</p>
+<p>http://api.jquery.com/jQuery.getScript/</p>
+<p>http://stackoverflow.com/a/18867406/3583166</p>
 </html>
